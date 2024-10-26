@@ -1,5 +1,18 @@
 # Learn Langgraph
 
+## Init
+
+* Setup python env
+```sh
+conda create -n learn-langgraph python=3.11
+conda activate learn-langgraph
+poetry install
+```
+* [Ollama](https://ollama.com/) run llama3.1
+```sh
+ollama run llama3.1
+```
+
 ## Basic ReActAgent Definition
 ```python
 import os
