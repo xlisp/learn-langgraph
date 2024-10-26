@@ -44,7 +44,7 @@ tools = [
 ]
 
 # Initialize the LLM
-llm = Ollama(model="llama3.1:latest", request_timeout=120.0)
+llm = Ollama(model="llama3.1:latest") #, request_timeout=120.0)
 
 # Create the prompt template
 prompt = ChatPromptTemplate.from_messages([
