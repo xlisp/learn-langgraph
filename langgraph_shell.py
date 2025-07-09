@@ -473,3 +473,35 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
+#  @ python langgraph_shell.py
+# /opt/anaconda3/lib/python3.11/site-packages/langgraph/graph/graph.py:31: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+# 
+# For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+# with: `from pydantic import BaseModel`
+# or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+# 
+#   from langgraph.pregel import Channel, Pregel
+# Traceback (most recent call last):
+#   File "/Users/clojure/Desktop/learn-langgraph/langgraph_shell.py", line 474, in <module>
+#     asyncio.run(main())
+#   File "/opt/anaconda3/lib/python3.11/asyncio/runners.py", line 190, in run
+#     return runner.run(main)
+#            ^^^^^^^^^^^^^^^^
+#   File "/opt/anaconda3/lib/python3.11/asyncio/runners.py", line 118, in run
+#     return self._loop.run_until_complete(task)
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#   File "/opt/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+#     return future.result()
+#            ^^^^^^^^^^^^^^^
+#   File "/Users/clojure/Desktop/learn-langgraph/langgraph_shell.py", line 442, in main
+#     agent = ReActAgent(api_key=OPENAI_API_KEY)
+#             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#   File "/Users/clojure/Desktop/learn-langgraph/langgraph_shell.py", line 186, in __init__
+#     self.graph = self._create_graph()
+#                  ^^^^^^^^^^^^^^^^^^^^
+#   File "/Users/clojure/Desktop/learn-langgraph/langgraph_shell.py", line 238, in _create_graph
+#     workflow.add_node("action", self._action_node)
+#   File "/opt/anaconda3/lib/python3.11/site-packages/langgraph/graph/state.py", line 160, in add_node
+#     raise ValueError(f"'{node}' is already being used as a state key")
+# ValueError: 'action' is already being used as a state key
+# 
